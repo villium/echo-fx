@@ -1,41 +1,22 @@
-
 # @villium/echo-fx
 
-Real-time audio effects processing library for filters, delays, distortion and more.
+🎛️ Real-time audio effects processing toolkit for JavaScript & TypeScript — part of the Villium Audio Stack.
 
-## Features
+[![npm version](https://img.shields.io/npm/v/@villium/echo-fx.svg)](https://www.npmjs.com/package/@villium/echo-fx)
+[![MIT License](https://img.shields.io/npm/l/@villium/echo-fx.svg)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TS-Ready-blue.svg)](https://www.typescriptlang.org/)
 
-- **BiQuad Filters** - Lowpass and highpass filtering with configurable frequency and Q
-- **Delay Effects** - Echo and delay with feedback control
-- **Compressor** - Dynamic range compression with attack/release
+---
 
-## Installation
+## 🎧 Features
+
+- 🎚 **BiQuad Filters** — Lowpass & highpass filtering with adjustable cutoff frequency and Q factor  
+- 🕒 **Delay Effects** — Configurable delay/echo with feedback and mix control  
+- 🔊 **Compressor** — Dynamic range compression with customizable attack/release
+
+---
+
+## 📦 Installation
 
 ```bash
 npm install @villium/echo-fx
-```
-
-## Usage
-
-```ts
-import { BiQuadFilter, DelayEffect, Compressor } from '@villium/echo-fx';
-
-// Create a lowpass filter
-const filter = new BiQuadFilter();
-filter.lowpass(1000, 44100, 0.707);
-
-// Process audio samples
-const filtered = filter.process(audioSample);
-
-// Add delay effect
-const delay = new DelayEffect(0.25, 44100, 0.3, 0.4);
-const delayed = delay.process(audioSample);
-
-// Compress dynamic range
-const compressor = new Compressor(0.7, 4, 0.003, 0.1, 44100);
-const compressed = compressor.process(audioSample);
-```
-
-## License
-
-MIT
